@@ -1,0 +1,308 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: bahnschrift;
+  src: url("../fonts/BAHNSCHRIFT.TTF");
+}
+@font-face {
+  font-family: lato;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+.container {
+  max-width: 2560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container .navbar {
+  list-style-type: none;
+  position: absolute;
+  width: 100%;
+  background-color: #66615a;
+  height: 125px;
+}
+.container .nav__list {
+  display: flex;
+  position: relative;
+}
+.container .nav__list .nav__logo {
+  padding-left: 49px;
+  padding-top: 18px;
+  margin-right: auto;
+}
+.container .nav__list .nav__listitem {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: end;
+  gap: 10px;
+}
+.container .nav__list .nav__listitem a {
+  text-decoration: none;
+  color: #e5a756;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 30px;
+  margin: 0 25px;
+  cursor: pointer;
+  transition: color 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .nav__list .nav__listitem a:hover {
+  color: #fff;
+}
+.container #box1-home {
+  position: relative;
+  width: 100%;
+  height: 276px;
+  top: 125px;
+  background-color: #917f67;
+  display: grid;
+}
+.container #box1-home svg {
+  margin: auto;
+}
+.container #box1-home h1 {
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 45px;
+  margin: auto;
+}
+.container #box2-home {
+  position: relative;
+  background-image: url("/images/home_background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 60em;
+  width: 100%;
+  z-index: -1;
+}
+.container #box1-about {
+  position: absolute;
+  width: 100%;
+  height: 276px;
+  top: 125px;
+  background-color: #917f67;
+  display: grid;
+  z-index: 1;
+}
+.container #box1-about svg {
+  margin: auto;
+}
+.container #box1-about h1 {
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 45px;
+  margin: auto;
+}
+.container #box2-about {
+  position: relative;
+  background-image: url("/images/about_background.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 106em;
+  width: 100%;
+  z-index: -1;
+}
+.container #box3-about {
+  position: relative;
+  width: 138em;
+  z-index: 1;
+  display: flex;
+  margin: -681px 46px;
+}
+.container #box3-about #item1 {
+  position: relative;
+  margin-left: 19.5em;
+  height: 35em;
+}
+.container #box3-about #item2 {
+  position: relative;
+  background-color: #917f67;
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 30px;
+  padding: 1.25em;
+  height: 11em;
+  width: 48em;
+  text-align: left;
+  margin-left: 2.5em;
+}
+.container #box1-portfolio {
+  position: absolute;
+  width: 100%;
+  height: 276px;
+  top: 125px;
+  background-color: #917f67;
+  display: grid;
+}
+.container #box1-portfolio svg {
+  margin: auto;
+}
+.container #box1-portfolio h1 {
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 45px;
+  margin: auto;
+}
+.container #box2-portfolio {
+  background-image: url("/images/home_background.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-position: bottom;
+  height: 88em;
+  width: auto;
+}
+.container #box1-contact {
+  position: absolute;
+  width: 100%;
+  height: 276px;
+  top: 125px;
+  background-color: #917f67;
+  display: grid;
+}
+.container #box1-contact svg {
+  margin: auto;
+}
+.container #box1-contact h1 {
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 45px;
+  margin: auto;
+}
+.container #box2-contact {
+  background-image: url("/images/home_background.png");
+  background-repeat: repeat;
+  background-size: 100%;
+  background-position: bottom;
+  height: 88em;
+  width: auto;
+}
+.container #box3-contact {
+  max-width: 1334px;
+}
+.container #box3-contact form {
+  border: none;
+  position: relative;
+  display: grid;
+  background-color: #917f67;
+  padding: 65px 205px;
+  gap: 2em;
+}
+.container #box3-contact form input[type=text],
+.container #box3-contact form input[type=email],
+.container #box3-contact form select {
+  height: 90px;
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  font-family: "bahnschrift", sans-serif;
+  font-size: 30px;
+}
+.container #box3-contact form #contact-stuff {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 2.5em 0em;
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 30px;
+  gap: 0.5em;
+}
+.container #box3-contact textarea {
+  border: none;
+  text-decoration: none;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 30px;
+  height: 234px;
+  margin-bottom: 1em;
+  padding: 35px 12px; /* Some padding */
+  color: #917f67;
+}
+.container #box3-contact button#button {
+  height: 96px;
+  width: 262px;
+  position: relative;
+  background-color: #e5a756;
+  color: #fff;
+  font-family: "bahnschrift", sans-serif;
+  font-size: 45px;
+  border: none;
+  display: inline-block;
+  transition: all 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor: pointer;
+}
+.container #box3-contact button#button:hover {
+  background-color: #fff;
+  color: #917f67;
+}
+.container footer {
+  height: 100px;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  background-color: #66615a;
+}
+.container footer span.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  font-size: 2em;
+  color: #e5a756;
+  margin-right: 100px;
+  position: relative;
+  top: 30px;
+  font-family: "bahnschrift", sans-serif;
+}
+.container footer #socials {
+  display: flex;
+  justify-content: center;
+  margin-left: 50px;
+  position: relative;
+  top: -10px;
+}
+
+@media screen and (max-width: 1536px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+@media (max-width: 475px) {
+  .container {
+    max-width: 375px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

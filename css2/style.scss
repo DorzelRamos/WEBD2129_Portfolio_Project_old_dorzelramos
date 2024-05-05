@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// ////////////////////////////// Colors
+$whiteColor: #fff;
+$blackColor: #000;
+$greyColor: #66615a;
+$brownColor: #917f67;
+$orangeColor: #e5a756;
+$gradientColor: linear-gradient(180deg, #e6daca 0%, #736d65 100%);
+
+// /////////////////////////////// Fonts
+@font-face {
+  font-family: bahnschrift;
+  src: url("../fonts/BAHNSCHRIFT.TTF");
+}
+
+@font-face {
+  font-family: lato;
+  src: url("../fonts/Lato-Regular.ttf");
+}
+
+$Bahnschrift: "bahnschrift", sans-serif;
+$Lato: "lato", sans-serif;
+
+// ///////////////////////////// MOBILE NAV STARTS HERE
+#mobile-nav {
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  .navbar {
+    width: 100%;
+    background-color: $greyColor;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+  }
+  section {
+    display: grid;
+    height: calc(100vh - 125px);
+    // background: url("../images/home_background-transparent.png");
+    background-color: $greyColor;
+    // opacity: 0.7;
+    ul.nav__list {
+      position: relative;
+      top: -100px;
+      height: 100%;
+      // padding: 2em 4em;
+      // background: white;
+      margin: auto;
+      // margin-top: 150px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li.nav__listitem {
+        margin: 1em 0;
+        a {
+          text-decoration: none;
+          color: $orangeColor;
+          font-family: $Bahnschrift;
+          font-size: 30px;
+          cursor: pointer;
+          transition: color 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        a:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      ul.nav__list {
+        transform: scale(2);
+      }
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  // height: 100vh;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  .navbar {
+    // position: absolute;
+    width: 100%;
+    background-color: $greyColor;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    padding: 0 1em;
+    .hamburger-menu {
+      position: relative;
+      z-index: 2;
+      margin-left: auto;
+      list-style: none;
+      width: 40px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      // display: none;
+      li {
+        width: 100%;
+        height: 4px;
+        background: white;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .hamburger-menu {
+        display: none;
+      }
+    }
+
+    ul.nav__list {
+      // visibility: hidden;
+      margin-left: auto;
+      list-style: none;
+      display: flex;
+      // flex-direction: column;
+      li.nav__listitem {
+        margin: 0 1em;
+        a {
+          text-decoration: none;
+          color: $orangeColor;
+          font-family: $Bahnschrift;
+          font-size: 30px;
+          cursor: pointer;
+          transition: color 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+          position: relative;
+          top: 1em;
+        }
+        a:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      ul.nav__list {
+        display: none;
+      }
+    }
+  }
+
+
+  #box1-home {
+    position: relative;
+    width: 100%;
+    height: 276px;
+    height: calc(100vh - 225px);
+    background-image: url("../images/home_background.png");
+
+    section {
+      background-color: $brownColor;
+      padding: 1em;
+
+      svg {
+        width: 100%;
+      }
+
+      h1 {
+        color: $whiteColor;
+        font-family: $Bahnschrift;
+        font-size: 45px;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+  // //////////////////////////////////
+  #box1-about {
+    position: relative;
+    width: 100%;
+    // height: 276px;
+    // height: calc(100vh - 225px);
+    background-image: url("../images/home_background.png");
+    section#header-section {
+      position: relative;
+      background-color: $brownColor;
+      padding: 1em;
+      svg {
+        width: 100%;
+      }
+      h1 {
+        color: $whiteColor;
+        font-family: $Bahnschrift;
+        font-size: 45px;
+        margin: auto;
+        width: 100%;
+        text-align: center;
+      }
+      @media screen and (max-width: 768px) {
+        h1 {
+          font-size: 25px;
+        }
+      }
+    }
+    div#about-content {
+      width: 100%;
+      display: grid;
+      // margin-bottom: 100px;
+      section#about-section {
+        width: 100%;
+        margin: auto;
+        img#about-item1 {
+          width: 300px;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+          padding: 1em;
+        }
+        p {
+          background-color: $brownColor;
+          padding: 2em;
+          // position: relative;
+        }
+      }
+    }
+    }
+  }
+
+
+  // /////////////////////////////////
+  footer#home-footer {
+    position: absolute;
+    margin-top: 100px;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: $greyColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+
+    span.copyright {
+      font-size: 1em;
+      color: $orangeColor;
+      font-family: $Bahnschrift;
+    }
+
+    #socials {
+      transform: scale(0.75);
+
+      path {
+        fill: #e5a756;
+        cursor: pointer;
+        transition: all 200ms linear;
+      }
+
+      path:hover {
+        fill: #fff;
+      }
+    }
+  }
+  footer#about-footer {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: $greyColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+   
+    span.copyright {
+      font-size: 1em;
+      color: $orangeColor;
+      font-family: $Bahnschrift;
+    }
+
+    #socials {
+      transform: scale(0.75);
+
+      path {
+        fill: #e5a756;
+        cursor: pointer;
+        transition: all 200ms linear;
+      }
+
+      path:hover {
+        fill: #fff;
+      }
+    }
+  }
+
